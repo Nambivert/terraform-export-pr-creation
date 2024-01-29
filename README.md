@@ -1,1 +1,3 @@
 # terraform-export-pr-creation
+
+This is a GCP based automation using Flask which exports the GCP resource using bulk-export to terraform code. Then a PR is created in target git repo which copies the exported TF file to target GH repo, create feature branch, commit and push changes and then Create PR from feature branch to main branch which is achieved by using GH and Git CLI. The Dockerfile is built using CloudBuild and container image will be run in CloudRun and HTTP request to flask app will be sent through Cloud Scheduler
